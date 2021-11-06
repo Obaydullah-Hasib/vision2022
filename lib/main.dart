@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:vision2022/buttons/dropDown.dart';
 import 'package:vision2022/day11/text_field.dart';
 import 'package:vision2022/day12/class_test.dart';
+import 'package:vision2022/day13/gridview.dart';
+import 'package:vision2022/day14/listview_builder.dart';
+import 'package:vision2022/day15/gridview_builder.dart';
+import 'package:vision2022/day15/task.dart';
+import 'package:vision2022/practice/county_currency_capital/country_currency_capital.dart';
 import 'package:vision2022/practice_bar/sliverAppBar.dart';
 
 import 'buttons/elevatedbutton.dart';
@@ -25,7 +30,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: flag_identity(),
+      home: country_currency_capital(),
     );
   }
 }

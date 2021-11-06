@@ -24,20 +24,25 @@ class _flag_identityState extends State<flag_identity> {
           // add more IconButton
         ],
       ),
-      floatingActionButton: FloatingActionButton.extended(onPressed: (){}, label: Text('Flag')),
-     body:
-        Column(
+      floatingActionButton:
+          FloatingActionButton.extended(onPressed: () {}, label: Text('Flag')),
+      body: SingleChildScrollView(
+        child: Column(
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 150 ,
+              height: 150,
               decoration: BoxDecoration(
                 color: Colors.redAccent.shade100,
-                
               ),
               child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.baseline,
                 children: [
-                  Image.asset('images/obaydul_kader.jpg',height: 120,width: MediaQuery.of(context).size.width/3,)
+                  Image.asset(
+                    'images/obaydul_kader.jpg',
+                    height: 120,
+                    width: MediaQuery.of(context).size.width / 3,
+                  )
                   // Container(
                   //   decoration: BoxDecoration(
                   //     image: DecorationImage(
@@ -45,17 +50,27 @@ class _flag_identityState extends State<flag_identity> {
                   //     )
                   //   ),
                   // )
-                  
+
                   ,
                   Container(
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.only(left: 10),
-                    alignment: Alignment.topLeft,
+                    alignment: Alignment.center,
+                    height: 150,
+                    color: Colors.amber,
+                    width: MediaQuery.of(context).size.width/1.6,
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
+
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text('Noakhali',style: TextStyle(fontSize: 30,color: Colors.pink.shade700),),
-                        Text('Bangladesh',style: TextStyle(fontSize: 30,color: Colors.pink.shade700)),
+                        Text(
+                          'Noakhali',
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.pink.shade700),
+                        ),
+                        Text('Bangladesh',
+                            style: TextStyle(
+                                fontSize: 30, color: Colors.pink.shade700)),
                       ],
                     ),
                   )
@@ -64,38 +79,382 @@ class _flag_identityState extends State<flag_identity> {
             ),
             SizedBox(
               height: 10,
-            )
+            ),Container(
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Colors.redAccent.shade100,
+              ),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.baseline,
+                children: [
+                  Image.asset(
+                    'images/obaydul_kader.jpg',
+                    height: 120,
+                    width: MediaQuery.of(context).size.width / 3,
+                  )
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: Image.asset('images/obydul_kader.jpg'),
+                  //     )
+                  //   ),
+                  // )
+
+                  ,
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(left: 10),
+                    alignment: Alignment.center,
+                    height: 150,
+
+                    color: Colors.amber,
+                    width: MediaQuery.of(context).size.width/1.6,
+                    child: Column(
+
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Noakhali',
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.pink.shade700),
+                        ),
+                        Text('Bangladesh',
+                            style: TextStyle(
+                                fontSize: 30, color: Colors.pink.shade700)),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),Container(
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Colors.redAccent.shade100,
+              ),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.baseline,
+                children: [
+                  Image.asset(
+                    'images/obaydul_kader.jpg',
+                    height: 120,
+                    width: MediaQuery.of(context).size.width / 3,
+                  )
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: Image.asset('images/obydul_kader.jpg'),
+                  //     )
+                  //   ),
+                  // )
+
+                  ,
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(left: 10),
+                    alignment: Alignment.topRight,
+                    height: 150,
+                    color: Colors.amber,
+                    width: MediaQuery.of(context).size.width/1.6,
+                    child: Column(
+
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Noakhali',
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.pink.shade700),
+                        ),
+                        Text('Bangladesh',
+                            style: TextStyle(
+                                fontSize: 30, color: Colors.pink.shade700)),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),Container(
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Colors.redAccent.shade100,
+              ),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.baseline,
+                children: [
+                  Image.asset(
+                    'images/obaydul_kader.jpg',
+                    height: 120,
+                    width: MediaQuery.of(context).size.width / 3,
+                  )
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: Image.asset('images/obydul_kader.jpg'),
+                  //     )
+                  //   ),
+                  // )
+
+                  ,
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(left: 10),
+                    alignment: Alignment.topRight,
+                    height: 150,
+                    color: Colors.amber,
+                    width: MediaQuery.of(context).size.width/1.6,
+                    child: Column(
+
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Noakhali',
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.pink.shade700),
+                        ),
+                        Text('Bangladesh',
+                            style: TextStyle(
+                                fontSize: 30, color: Colors.pink.shade700)),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),Container(
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Colors.redAccent.shade100,
+              ),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.baseline,
+                children: [
+                  Image.asset(
+                    'images/obaydul_kader.jpg',
+                    height: 120,
+                    width: MediaQuery.of(context).size.width / 3,
+                  )
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: Image.asset('images/obydul_kader.jpg'),
+                  //     )
+                  //   ),
+                  // )
+
+                  ,
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(left: 10),
+                    alignment: Alignment.topRight,
+                    height: 150,
+                    color: Colors.amber,
+                    width: MediaQuery.of(context).size.width/1.6,
+                    child: Column(
+
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Noakhali',
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.pink.shade700),
+                        ),
+                        Text('Bangladesh',
+                            style: TextStyle(
+                                fontSize: 30, color: Colors.pink.shade700)),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),Container(
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Colors.redAccent.shade100,
+              ),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.baseline,
+                children: [
+                  Image.asset(
+                    'images/obaydul_kader.jpg',
+                    height: 120,
+                    width: MediaQuery.of(context).size.width / 3,
+                  )
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: Image.asset('images/obydul_kader.jpg'),
+                  //     )
+                  //   ),
+                  // )
+
+                  ,
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(left: 10),
+                    alignment: Alignment.topRight,
+                    height: 150,
+                    color: Colors.amber,
+                    width: MediaQuery.of(context).size.width/1.6,
+                    child: Column(
+
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Noakhali',
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.pink.shade700),
+                        ),
+                        Text('Bangladesh',
+                            style: TextStyle(
+                                fontSize: 30, color: Colors.pink.shade700)),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),Container(
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Colors.redAccent.shade100,
+              ),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.baseline,
+                children: [
+                  Image.asset(
+                    'images/obaydul_kader.jpg',
+                    height: 120,
+                    width: MediaQuery.of(context).size.width / 3,
+                  )
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: Image.asset('images/obydul_kader.jpg'),
+                  //     )
+                  //   ),
+                  // )
+
+                  ,
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(left: 10),
+                    alignment: Alignment.topRight,
+                    height: 150,
+                    color: Colors.amber,
+                    width: MediaQuery.of(context).size.width/1.6,
+                    child: Column(
+
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Noakhali',
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.pink.shade700),
+                        ),
+                        Text('Bangladesh',
+                            style: TextStyle(
+                                fontSize: 30, color: Colors.pink.shade700)),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),Container(
+              width: MediaQuery.of(context).size.width,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Colors.redAccent.shade100,
+              ),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.baseline,
+                children: [
+                  Image.asset(
+                    'images/obaydul_kader.jpg',
+                    height: 120,
+                    width: MediaQuery.of(context).size.width / 3,
+                  )
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //       image: Image.asset('images/obydul_kader.jpg'),
+                  //     )
+                  //   ),
+                  // )
+
+                  ,
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.only(left: 10),
+                    alignment: Alignment.topRight,
+                    height: 150,
+                    color: Colors.amber,
+                    width: MediaQuery.of(context).size.width/1.6,
+                    child: Column(
+
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Noakhali',
+                          style: TextStyle(
+                              fontSize: 30, color: Colors.pink.shade700),
+                        ),
+                        Text('Bangladesh',
+                            style: TextStyle(
+                                fontSize: 30, color: Colors.pink.shade700)),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
           ],
 
-
-
-
-
-
-
-
-     //ListView(
-    //     children: [
-    //       Container(
-    //   decoration: BoxDecoration(
-    //   image: DecorationImage(
-    //       image: AssetImage(
-    //       'images/obaydul_kader.jpg'),
-    //
-    // ),
-    //         color: Colors.amber,
-    //
-    //       ),    height: 150,
-    //         width: MediaQuery.of(context).size.width,
-    //      child: Text('Alabama Montgomery'
-    //      ),
-    //       ),
-    //     SizedBox(
-    //       height: 5,
-    //     ),
-    //     ],
-
+          //ListView(
+          //     children: [
+          //       Container(
+          //   decoration: BoxDecoration(
+          //   image: DecorationImage(
+          //       image: AssetImage(
+          //       'images/obaydul_kader.jpg'),
+          //
+          // ),
+          //         color: Colors.amber,
+          //
+          //       ),    height: 150,
+          //         width: MediaQuery.of(context).size.width,
+          //      child: Text('Alabama Montgomery'
+          //      ),
+          //       ),
+          //     SizedBox(
+          //       height: 5,
+          //     ),
+          //     ],
         ),
+      ),
     );
   }
 }
