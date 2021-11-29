@@ -22,8 +22,9 @@ class _ListView_State extends State<ListView_> {
         centerTitle: true,
       ),
       body:  ListView.builder(itemCount: student.length,itemBuilder: (context,index){
-        return Card(child: ListTile(
-          title: Text('Value: ${student[index]}'),
+        return Card(child: Column(
+          children: [Text('Value: ${student[index]}'),
+           ],
         ),);
       }),
     );
