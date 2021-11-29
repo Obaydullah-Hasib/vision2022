@@ -11,6 +11,7 @@ import 'package:vision2022/practice_bar/sliverAppBar.dart';
 
 import 'buttons/elevatedbutton.dart';
 import 'day10/listview_listtile.dart';
+import 'day17/list.dart';
 import 'day9/stackclass.dart';
 
 
@@ -30,7 +31,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: country_currency_capital(),
+      home: ListView_(),
     );
   }
 }

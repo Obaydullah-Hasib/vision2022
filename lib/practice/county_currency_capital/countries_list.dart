@@ -16,7 +16,7 @@ class _country_listState extends State<country_list> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text('All Countries'),
+        title: const Text('All Countries'),
         backgroundColor: Colors.blue.shade900,
         centerTitle: true,
       )
