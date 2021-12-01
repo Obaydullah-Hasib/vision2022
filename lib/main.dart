@@ -8,19 +8,19 @@ import 'package:vision2022/day15/gridview_builder.dart';
 import 'package:vision2022/day15/task.dart';
 import 'package:vision2022/practice/county_currency_capital/country_currency_capital.dart';
 import 'package:vision2022/practice_bar/sliverAppBar.dart';
-
+import 'package:share/share.dart';
 import 'buttons/elevatedbutton.dart';
 import 'day10/listview_listtile.dart';
 import 'day17/list.dart';
 import 'day17/practiceuser/practiceuser_display.dart';
 import 'day9/stackclass.dart';
 
-
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
+
 class MyApp extends StatefulWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -29,7 +29,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: PracticeDisplay(),
