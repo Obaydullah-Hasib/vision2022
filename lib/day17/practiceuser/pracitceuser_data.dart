@@ -1,12 +1,28 @@
 import 'pracitceuser_model.dart';
 
+
+List<Country> CountryVar(){
+ List<Country> listc = <Country>[];
+ Country asd = Country();
+ asd.cname='ab';
+ asd.cap='ab';
+ asd.imageid='ab';
+ listc.add(asd);
+
+ return listc;
+}
+
+
+
 List<PracticeUser> GetPracticeUser() {
-  List<PracticeUser> list = <PracticeUser>[];
+
+ List<PracticeUser> list = <PracticeUser>[];
   PracticeUser practiceUser = PracticeUser();
   practiceUser.id = '170';
   practiceUser.name = 'Obay';
   practiceUser.phone = '1670';
   practiceUser.pass = 'Obafghy';
+
   list.add(practiceUser);
 
  practiceUser = PracticeUser();
@@ -14,6 +30,7 @@ List<PracticeUser> GetPracticeUser() {
   practiceUser.name = 'Obady';
   practiceUser.phone = '221670';
   practiceUser.pass = 'xfbgObafghy';
+
   list.add(practiceUser);
  practiceUser = PracticeUser();
   practiceUser.id = '114270';

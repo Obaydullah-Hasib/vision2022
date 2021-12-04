@@ -12,10 +12,13 @@ class PracticeDisplay extends StatefulWidget {
 class _PracticeDisplayState extends State<PracticeDisplay> {
   List<PracticeUser> practiceUsers=[];
   @override
+
   void initState() {
     // TODO: implement initState
     super.initState();
     practiceUsers=GetPracticeUser();
+    /*asd= CountryVar();*/
+
   }
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,8 @@ class _PracticeDisplayState extends State<PracticeDisplay> {
           children: [Text('${practiceUsers[index].name}'),
             Text('${practiceUsers[index].id}'),
             Text('${practiceUsers[index].pass}'),
-            Text('${practiceUsers[index].phone}'),],
+            Text('${practiceUsers[index].phone}'),
+         /*Text('${asd[index].cname}')*/ ],
         ),);
       }),
     );
