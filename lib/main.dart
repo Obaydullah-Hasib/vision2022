@@ -9,6 +9,7 @@ import 'package:vision2022/day15/task.dart';
 import 'package:vision2022/practice/county_currency_capital/country_currency_capital.dart';
 import 'package:vision2022/practice_bar/sliverAppBar.dart';
 import 'package:share/share.dart';
+import 'package:vision2022/rakibApp.dart';
 import 'buttons/elevatedbutton.dart';
 import 'day10/listview_listtile.dart';
 import 'day17/list.dart';
@@ -31,7 +32,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PracticeDisplay(),
+      home: Blacksmith(),
     );
   }
 }
