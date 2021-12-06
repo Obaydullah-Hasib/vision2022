@@ -8,6 +8,9 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
+  String equation ='0';
+  String result ='0';
+  String expression ='';
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -20,7 +23,8 @@ class _CalculatorState extends State<Calculator> {
           Container(
             color: Colors.lime,
             child: Text(
-              'Equation',
+              equation,
+              maxLines: 1,
               style: TextStyle(fontSize: size.height * 0.05),
             ),
             padding: EdgeInsets.symmetric(
@@ -31,7 +35,7 @@ class _CalculatorState extends State<Calculator> {
           Container(
             color: Colors.pinkAccent,
             child: Text(
-              'Result',
+              result,
               style: TextStyle(fontSize: size.height * 0.05),
             ),
             padding: EdgeInsets.symmetric(
@@ -123,7 +127,22 @@ class _CalculatorState extends State<Calculator> {
       margin: EdgeInsets.symmetric(
           horizontal: size.width * 0.002, vertical: size.height * 0.001),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            if(buttonText=='C'){
+              equation='0';
+              result='0';
+            }
+            else if(
+            buttonText=='AC'
+            ){
+            }
+            else{
+              equation = equation+buttonText;
+            }
+          });
+
+        },
         child: Text(
           buttonText,
           style: TextStyle(
@@ -131,6 +150,7 @@ class _CalculatorState extends State<Calculator> {
             color: buttonTextColor,
           ),
         ),
+
       ),
     );
   }
