@@ -6,9 +6,6 @@ import 'package:vision2022/day13/gridview.dart';
 import 'package:vision2022/day14/listview_builder.dart';
 import 'package:vision2022/day15/gridview_builder.dart';
 import 'package:vision2022/day15/task.dart';
-import 'package:vision2022/day18/tabbar.dart';
-import 'package:vision2022/day19/curveNavigationBar.dart';
-import 'package:vision2022/day19/popUpMenuButton.dart';
 import 'package:vision2022/practice/county_currency_capital/country_currency_capital.dart';
 import 'package:vision2022/practice_bar/sliverAppBar.dart';
 
@@ -16,7 +13,6 @@ import 'buttons/elevatedbutton.dart';
 import 'day10/listview_listtile.dart';
 import 'day17/list.dart';
 import 'day17/practiceuser/practiceuser_display.dart';
-import 'day18/bottomnavigationbar.dart';
 import 'day9/stackclass.dart';
 
 
@@ -36,7 +32,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CurveNavigationBarClass(),
+      home: PracticeDisplay(),
     );
   }
 }
