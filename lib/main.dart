@@ -13,6 +13,7 @@ import 'buttons/elevatedbutton.dart';
 import 'day10/listview_listtile.dart';
 import 'day17/list.dart';
 import 'day17/practiceuser/practiceuser_display.dart';
+import 'day20/calculator.dart';
 import 'day9/stackclass.dart';
 
 
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PracticeDisplay(),
+      home: Calculator(),
     );
   }
 }

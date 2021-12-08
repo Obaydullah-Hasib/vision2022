@@ -29,9 +29,8 @@ class _CurveNavigationBarClassState extends State<CurveNavigationBarClass> {
           setState(() {
             _currentIndex=index;
           });
-        },
-          le
-        height: 60.0,
+        }
+        ,  height: 60.0,
         color: Colors.greenAccent,
         backgroundColor: Colors.pinkAccent,
         buttonBackgroundColor: Colors.limeAccent,
