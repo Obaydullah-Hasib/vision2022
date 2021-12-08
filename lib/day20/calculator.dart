@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:math_expressions/math_expressions.dart';
 
 class Calculator extends StatefulWidget {
   const Calculator({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class Calculator extends StatefulWidget {
 class _CalculatorState extends State<Calculator> {
   String equation ='0';
   String result ='0';
-  String expression ='';
+  String expression='';
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -136,9 +137,47 @@ class _CalculatorState extends State<Calculator> {
             else if(
             buttonText=='AC'
             ){
+              equation = equation.substring(0,equation.length-1);
+              if(equation=='')
+                {
+                  equation='0';
+                }
+
             }
+            else if (buttonText=='=')
+              {
+                expression=equation;
+                expression=expression.replaceAll('÷', '/');
+                expression=expression.replaceAll('×', '*');
+
+                try{
+
+                  /*p is a object of Parse class*/
+                  Parser p = Parser();
+                  Expression exp = p.parse(expression);
+                  //cm(contextModel) is a object here
+                  ContextModel cm = ContextModel();
+                  result = '${exp.evaluate(EvaluationType.REAL, cm)}';
+                }
+                catch(error)
+            {
+              result='Error';
+            }
+
+            equation = result;
+           // equation = buttonText;
+
+              }
+
             else{
-              equation = equation+buttonText;
+              if(equation!='0')
+                {
+                  equation+= buttonText;
+                }
+              else
+                {
+                  equation = buttonText;
+                }
             }
           });
 
