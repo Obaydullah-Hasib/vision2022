@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.0.17
   share: ^2.0.4
   math_expressions: ^2.2.0
+  image_picker: ^0.8.4+4
 
 dev_dependencies:
   flutter_test:
