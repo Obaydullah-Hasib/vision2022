@@ -7,6 +7,9 @@ import 'package:vision2022/day14/listview_builder.dart';
 import 'package:vision2022/day15/gridview_builder.dart';
 import 'package:vision2022/day15/task.dart';
 import 'package:vision2022/day21/switch.dart';
+import 'package:vision2022/day22/flutter_search_bar.dart';
+import 'package:vision2022/day22/flutter_search_delecate.dart';
+import 'package:vision2022/day22/imagePicker.dart';
 import 'package:vision2022/practice/county_currency_capital/country_currency_capital.dart';
 import 'package:vision2022/practice_bar/sliverAppBar.dart';
 
@@ -17,12 +20,12 @@ import 'day17/practiceuser/practiceuser_display.dart';
 import 'day20/calculator.dart';
 import 'day9/stackclass.dart';
 
-
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
+
 class MyApp extends StatefulWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -31,10 +34,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FlutterSwitch(),
+      home: SearchDelegateClass(),
     );
   }
 }

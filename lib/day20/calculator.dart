@@ -9,9 +9,9 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  String equation ='0';
-  String result ='0';
-  String expression='';
+  String equation = '0';
+  String result = '0';
+  String expression = '';
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -86,28 +86,23 @@ class _CalculatorState extends State<Calculator> {
                       children: [
                         buildButton('×', 1.0, Colors.redAccent, Colors.black),
                       ],
-
                     ),
                     TableRow(
                       children: [
                         buildButton('+', 1.0, Colors.redAccent, Colors.black),
                       ],
-
                     ),
-
                     TableRow(
                       children: [
                         buildButton('-', 1.0, Colors.redAccent, Colors.black),
                       ],
-
                     ),
                     TableRow(
                       children: [
-                        buildButton('=', 2.0, Colors.lightGreenAccent, Colors.black),
+                        buildButton(
+                            '=', 2.0, Colors.lightGreenAccent, Colors.black),
                       ],
-
                     ),
-
                   ],
                 ),
               )
@@ -130,57 +125,41 @@ class _CalculatorState extends State<Calculator> {
       child: TextButton(
         onPressed: () {
           setState(() {
-            if(buttonText=='C'){
-              equation='0';
-              result='0';
-            }
-            else if(
-            buttonText=='AC'
-            ){
-              equation = equation.substring(0,equation.length-1);
-              if(equation=='')
-                {
-                  equation='0';
-                }
+            if (buttonText == 'C') {
+              equation = '0';
+              result = '0';
+            } else if (buttonText == 'AC') {
+              equation = equation.substring(0, equation.length - 1);
+              if (equation == '') {
+                equation = '0';
+              }
+            } else if (buttonText == '=') {
+              expression = equation;
+              expression = expression.replaceAll('÷', '/');
+              expression = expression.replaceAll('×', '*');
 
-            }
-            else if (buttonText=='=')
-              {
-                expression=equation;
-                expression=expression.replaceAll('÷', '/');
-                expression=expression.replaceAll('×', '*');
-
-                try{
-
-                  /*p is a object of Parse class*/
-                  Parser p = Parser();
-                  Expression exp = p.parse(expression);
-                  //cm(contextModel) is a object here
-                  ContextModel cm = ContextModel();
-                  result = '${exp.evaluate(EvaluationType.REAL, cm)}';
-                }
-                catch(error)
-            {
-              result='Error';
-            }
-
-            equation = result;
-           // equation = buttonText;
-
+              try {
+                /*p is a object of Parse class*/
+                Parser p = Parser();
+                Expression exp = p.parse(expression);
+                //cm(contextModel) is a object here
+                ContextModel cm = ContextModel();
+                result = '${exp.evaluate(EvaluationType.REAL, cm)}';
+              } catch (error) {
+                result = 'Error';
               }
 
-            else{
-              if(equation!='0')
-                {
-                  equation+= buttonText;
-                }
-              else
-                {
-                  equation = buttonText;
-                }
+              equation = result;
+              // equation = buttonText;
+
+            } else {
+              if (equation != '0') {
+                equation += buttonText;
+              } else {
+                equation = buttonText;
+              }
             }
           });
-
         },
         child: Text(
           buttonText,
@@ -189,7 +168,6 @@ class _CalculatorState extends State<Calculator> {
             color: buttonTextColor,
           ),
         ),
-
       ),
     );
   }
