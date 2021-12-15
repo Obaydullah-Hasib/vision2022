@@ -7,6 +7,8 @@ import 'package:vision2022/day14/listview_builder.dart';
 import 'package:vision2022/day15/gridview_builder.dart';
 import 'package:vision2022/day15/task.dart';
 import 'package:vision2022/day21/switch.dart';
+import 'package:vision2022/day22/flutter_search_bar.dart';
+import 'package:vision2022/day22/flutter_search_delecate.dart';
 import 'package:vision2022/practice/county_currency_capital/country_currency_capital.dart';
 import 'package:vision2022/practice_bar/sliverAppBar.dart';
 
@@ -15,6 +17,8 @@ import 'day10/listview_listtile.dart';
 import 'day17/list.dart';
 import 'day17/practiceuser/practiceuser_display.dart';
 import 'day20/calculator.dart';
+import 'day24/datePicker.dart';
+import 'day24/task/country_capital_day24/country_currnecy_capital_homepage.dart';
 import 'day9/stackclass.dart';
 
 
@@ -34,7 +38,7 @@ class _MyAppState extends State<MyApp> {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FlutterSwitch(),
+      home: DatePickerClass(),
     );
   }
 }

@@ -95,9 +95,13 @@ class DataSearch extends SearchDelegate<String> {
   Widget buildSuggestions(BuildContext context) {
     // TODO: implement buildSuggestions
     //sho/wing previous search history or suggestion whatever i want
-    final suggestionList = query.isEmpty
-        ? recentHistory
-        : citys.where((element) => element.startsWith(query)).toList();
+    final List<String> suggestionList;
+    if (query.isEmpty) {
+      suggestionList = recentHistory;
+    } else {
+
+      suggestionList = citys.where((element) => element.toLowerCase().startsWith(query)).toList();
+    }
     return ListView.builder(
         itemCount: suggestionList.length,
         itemBuilder: (context, index) => ListTile(

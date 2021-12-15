@@ -20,8 +20,17 @@ class _flutter_search_barState extends State<flutter_search_bar> {
     'tader choddo gustir nam',
     'tar choddo gustir nam',
   ];
+  List <String> searchList =[];
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    searchList= student;
+  }
+  @override
+
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: Text('search bar'),
@@ -47,7 +56,7 @@ class _flutter_search_barState extends State<flutter_search_bar> {
             keyboardType: TextInputType.text,
             onChanged: (String searchElement) {
               setState(() {
-                student = student
+                searchList = student
                     .where((element) => (element
                         .toLowerCase()
                         .contains(searchElement.toLowerCase())))
@@ -58,7 +67,7 @@ class _flutter_search_barState extends State<flutter_search_bar> {
           Expanded(
             child: Container(
               child: ListView.builder(
-                  itemCount: student.length,
+                  itemCount: searchList.length,
                   itemBuilder: (context, index) {
                     return Card(
                       child: ListTile(
