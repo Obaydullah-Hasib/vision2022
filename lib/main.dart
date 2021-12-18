@@ -18,7 +18,9 @@ import 'day17/list.dart';
 import 'day17/practiceuser/practiceuser_display.dart';
 import 'day20/calculator.dart';
 import 'day24/datePicker.dart';
+import 'day24/task/country_capital_day24/All Countries.dart';
 import 'day24/task/country_capital_day24/country_currnecy_capital_homepage.dart';
+import 'day25/modalBottomSheet.dart';
 import 'day9/stackclass.dart';
 
 void main() {
@@ -37,7 +39,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CountryCurrencyCapitalHomepage(),
+      home: ModalBottomSheetClass(),
     );
   }
 }

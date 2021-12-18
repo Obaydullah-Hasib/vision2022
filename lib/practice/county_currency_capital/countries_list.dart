@@ -65,7 +65,7 @@ class _country_listState extends State<country_list> {
                 fontSize: 16.0,
 
               ),),
-              leading: Image.asset('images/flags/afganistan.png'),
+              leading: Image.asset('images/flags/Afghanistan.png'),
             ),
           ),
           GestureDetector(
@@ -85,7 +85,7 @@ class _country_listState extends State<country_list> {
                 fontSize: 16.0,
 
               ),),
-              leading: Image.asset('images/flags/afganistan.png'),
+              leading: Image.asset('images/flags/Afghanistan.png'),
             ),
           ),
           GestureDetector(
@@ -105,7 +105,7 @@ class _country_listState extends State<country_list> {
                 fontSize: 16.0,
 
               ),),
-              leading: Image.asset('images/flags/afganistan.png'),
+              leading: Image.asset('images/flags/Afghanistan.png'),
             ),
           ),
           GestureDetector(
@@ -125,7 +125,7 @@ class _country_listState extends State<country_list> {
                 fontSize: 16.0,
 
               ),),
-              leading: Image.asset('images/flags/afganistan.png'),
+              leading: Image.asset('images/flags/Afghanistan.png'),
             ),
           ),
           GestureDetector(
@@ -145,7 +145,7 @@ class _country_listState extends State<country_list> {
                 fontSize: 16.0,
 
               ),),
-              leading: Image.asset('images/flags/afganistan.png'),
+              leading: Image.asset('images/flags/Afghanistan.png'),
             ),
           ),
           GestureDetector(
@@ -165,7 +165,7 @@ class _country_listState extends State<country_list> {
                 fontSize: 16.0,
 
               ),),
-              leading: Image.asset('images/flags/afganistan.png'),
+              leading: Image.asset('images/flags/Afghanistan.png'),
             ),
           ),
         ],

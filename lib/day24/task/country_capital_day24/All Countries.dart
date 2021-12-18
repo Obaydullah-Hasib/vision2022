@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vision2022/day23/url_launcher.dart';
+import 'package:vision2022/day24/task/country_capital_day24/country_info/country_info.dart';
 
 import '../../../practice/county_currency_capital/country_list_model.dart';
 
@@ -15,15 +16,14 @@ class _AllCountryListState extends State<AllCountryList> {
     'Afghanistan',
     'Albania',
     'Algeria',
-    'American Samoa',
     'Andorra',
     'Angola',
-    'Anguilla',
-    'Antarctica',
+    // 'Anguilla',
+    // 'Antarctica',
     'Antigua and Barbuda',
     'Argentina',
     'Armenia',
-    'Aruba',
+    // 'Aruba',
     'Australia',
     'Austria',
     'Azerbaijan',
@@ -261,17 +261,42 @@ class _AllCountryListState extends State<AllCountryList> {
       appBar: AppBar(
         title: Text('All Country'),
       ),
-      body: ListView.builder(
-          itemCount: countries.length,
-          itemBuilder: (context, index) {
-            return Card(
-              child: Column(
-                children: [
-                  Text('${countries[index]}'),
-                ],
-              ),
-            );
-          }),
+      body: Container(
+          color: Colors.black87,
+        child: ListView.builder(
+
+            itemCount: countries.length,
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap:(){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>country_info()));
+                } ,
+                child: Card(
+
+                  color: Colors.white38,
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Padding(
+                            padding:EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/80,vertical: MediaQuery.of(context).size.width/100),
+                            child: Image.asset('images/flags/Flag_of_${countries[index]}.png',scale: 2,),
+                          )
+                          ,
+                          Text('${countries[index]}',
+                            style: TextStyle(
+                              height: 2,
+                              color: Colors.white,
+                              fontSize: 16.0,
+                            ),),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              );
+            }),
+      ),
     );
   }
 }
