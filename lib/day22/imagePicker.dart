@@ -1,4 +1,7 @@
+import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ImagePickerClass extends StatefulWidget {
   const ImagePickerClass({Key? key}) : super(key: key);
@@ -8,36 +11,48 @@ class ImagePickerClass extends StatefulWidget {
 }
 
 class _ImagePickerClassState extends State<ImagePickerClass> {
+  File? _image;
+  ImagePicker picking = ImagePicker();
+  Future CameraImage() async{
+    final pickFile = await picking.pickImage(source: ImageSource.camera,
+    maxHeight: 300, maxWidth: 300,
+    );
+    setState(() {
+      _image = File(pickFile!.path);
+    });
+  }
+  Future GalleryImage() async{
+    final pickFile = await picking.pickImage(source: ImageSource.gallery,
+      maxHeight: 300, maxWidth: 300,
+    );
+    setState(() {
+      _image = File(pickFile!.path);
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('image picker'),
+        title: Text('Image Picker'),
       ),
       body: Container(
         child: Column(
           children: [
             Container(
-              height: 300,
-              width: 300,
-              color: Colors.redAccent,
+              width: 300,height: 300,
+              color: Colors.blue,
               alignment: Alignment.center,
-              child: Text('Pick your picture'),
+              child: _image==null?Text('Pick your Image'):Image.file(_image!),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RaisedButton(
-                  onPressed: () {},
-                  child: Icon(Icons.camera),
+                RaisedButton(onPressed: CameraImage,
+                child: Icon(Icons.camera),
                 ),
-                SizedBox(
-                  width: 20,
-                ),
-                RaisedButton(
-                  onPressed: () {},
+                RaisedButton(onPressed: GalleryImage,
                   child: Icon(Icons.image),
-                )
+                ),
               ],
             )
           ],

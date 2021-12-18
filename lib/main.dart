@@ -21,12 +21,12 @@ import 'day24/datePicker.dart';
 import 'day24/task/country_capital_day24/country_currnecy_capital_homepage.dart';
 import 'day9/stackclass.dart';
 
-
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
+
 class MyApp extends StatefulWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   _MyAppState createState() => _MyAppState();
@@ -35,10 +35,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DatePickerClass(),
+      home: CountryCurrencyCapitalHomepage(),
     );
   }
 }
