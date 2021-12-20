@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vision2022/day23/url_launcher.dart';
 import 'package:vision2022/day24/task/country_capital_day24/country_info/country_info_display.dart';
+import 'package:vision2022/day24/task/country_info/country_info_display.dart';
 
 import '../../../practice/country_project/country_info/country_info_display.dart';
 import '../../../practice/county_currency_capital/country_info.dart';
