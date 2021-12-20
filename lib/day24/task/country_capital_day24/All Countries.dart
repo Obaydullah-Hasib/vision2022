@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:vision2022/day23/url_launcher.dart';
-import 'package:vision2022/day24/task/country_capital_day24/country_info/country_info.dart';
+import 'package:vision2022/day24/task/country_capital_day24/country_info/country_info_display.dart';
 
+import '../../../practice/country_project/country_info/country_info_display.dart';
+import '../../../practice/county_currency_capital/country_info.dart';
 import '../../../practice/county_currency_capital/country_list_model.dart';
 
 class AllCountryList extends StatefulWidget {
@@ -262,33 +264,42 @@ class _AllCountryListState extends State<AllCountryList> {
         title: Text('All Country'),
       ),
       body: Container(
-          color: Colors.black87,
+        color: Colors.black87,
         child: ListView.builder(
-
             itemCount: countries.length,
             itemBuilder: (context, index) {
               return GestureDetector(
-                onTap:(){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>country_info()));
-                } ,
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CountryInfo_Display()));
+                },
                 child: Card(
-
                   color: Colors.white38,
                   child: Column(
                     children: [
                       Row(
                         children: [
                           Padding(
-                            padding:EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width/80,vertical: MediaQuery.of(context).size.width/100),
-                            child: Image.asset('images/flags/Flag_of_${countries[index]}.png',scale: 2,),
-                          )
-                          ,
-                          Text('${countries[index]}',
+                            padding: EdgeInsets.symmetric(
+                                horizontal:
+                                    MediaQuery.of(context).size.width / 80,
+                                vertical:
+                                    MediaQuery.of(context).size.width / 100),
+                            child: Image.asset(
+                              'images/flags/Flag_of_${countries[index]}.png',
+                              scale: 2,
+                            ),
+                          ),
+                          Text(
+                            '${countries[index]}',
                             style: TextStyle(
                               height: 2,
                               color: Colors.white,
                               fontSize: 16.0,
-                            ),),
+                            ),
+                          ),
                         ],
                       )
                     ],

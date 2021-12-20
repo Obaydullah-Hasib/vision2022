@@ -52,13 +52,15 @@ class _ModalBottomSheetClassState extends State<ModalBottomSheetClass> {
                                 color: Theme.of(context).primaryColor,
                               ),
                             ),
-                        SizedBox(height: 10,)
-                        ,
+                            SizedBox(
+                              height: 10,
+                            ),
                             Expanded(
-                                child: GridView.builder(itemCount: 6,
+                                child: GridView.builder(
+                                    itemCount: 6,
                                     gridDelegate:
                                         SliverGridDelegateWithFixedCrossAxisCount(
-                                        mainAxisSpacing: 10,
+                                            mainAxisSpacing: 10,
                                             crossAxisSpacing: 10,
                                             crossAxisCount: 3),
                                     itemBuilder: (context, index) {

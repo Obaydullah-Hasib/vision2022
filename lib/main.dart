@@ -9,7 +9,9 @@ import 'package:vision2022/day15/task.dart';
 import 'package:vision2022/day21/switch.dart';
 import 'package:vision2022/day22/flutter_search_bar.dart';
 import 'package:vision2022/day22/flutter_search_delecate.dart';
+import 'package:vision2022/practice/country_project/country_info/country_info_display.dart';
 import 'package:vision2022/practice/county_currency_capital/country_currency_capital.dart';
+import 'package:vision2022/practice/county_currency_capital/country_info.dart';
 import 'package:vision2022/practice_bar/sliverAppBar.dart';
 
 import 'buttons/elevatedbutton.dart';
@@ -20,6 +22,7 @@ import 'day20/calculator.dart';
 import 'day24/datePicker.dart';
 import 'day24/task/country_capital_day24/All Countries.dart';
 import 'day24/task/country_capital_day24/country_currnecy_capital_homepage.dart';
+import 'day24/task/country_capital_day24/country_info/country_info_display.dart';
 import 'day25/modalBottomSheet.dart';
 import 'day9/stackclass.dart';
 
@@ -39,7 +42,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ModalBottomSheetClass(),
+      home: CountryInfo_Display(),
     );
   }
 }

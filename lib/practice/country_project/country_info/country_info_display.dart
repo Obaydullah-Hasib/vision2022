@@ -1,46 +1,52 @@
 import 'package:flutter/material.dart';
+import 'country_info_data.dart';
+import 'country_info_model.dart';
 
-import '../../day24/task/country_capital_day24/countryList/countryListData.dart';
-
-class country_info extends StatefulWidget {
-  const country_info({Key? key}) : super(key: key);
+class CountryInfo_Display extends StatefulWidget {
+  const CountryInfo_Display({Key? key}) : super(key: key);
 
   @override
-  _country_infoState createState() => _country_infoState();
+  _CountryInfo_DisplayState createState() => _CountryInfo_DisplayState();
 }
 
-class _country_infoState extends State<country_info> {
+class _CountryInfo_DisplayState extends State<CountryInfo_Display> {
+  List<Country_Info> info = [];
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    info = GetCountryInfo();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black54,
       appBar: AppBar(
-        title: Text('Afganistan'),
+        title: Text('Country Info'),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: [
-              Image.asset(
-                'images/flags/Flag_of_Afghanistan.png',
-                alignment: Alignment.center,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0),
+      body: ListView.builder(
+          itemCount: 1,
+          itemBuilder: (context, index) {
+            return Container(
+              color: Colors.black54,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 8.0),
                 child: Container(
-                  padding: EdgeInsets.all(8.0),
                   decoration: BoxDecoration(
-                    border: Border.all(width: 10, color: Colors.white),
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Colors.black54,
-                  ),
+                      border: Border.all(width: 8.0, color: Colors.black12),
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Colors.black54),
                   child: Column(
                     children: [
                       ListTile(
+                        trailing: Icon(
+                          Icons.favorite,
+                          color: Colors.white,
+                        ),
                         title: Center(
                           child: Text(
-                            'Belgium',
+                            '${info[index].name}',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 30.0,
@@ -48,9 +54,26 @@ class _country_infoState extends State<country_info> {
                             ),
                           ),
                         ),
-                        trailing: Icon(
-                          Icons.favorite_border_outlined,
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.home,
                           color: Colors.white,
+                        ),
+                        title: Text(
+                          '${info[index].capital}',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Capital',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                       ListTile(
@@ -59,37 +82,39 @@ class _country_infoState extends State<country_info> {
                           color: Colors.white,
                         ),
                         title: Text(
-                          'Euro(EUR)',
+                          '${info[index].currency}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text(
                           'Currency',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                       ListTile(
                         leading: Icon(
-                          Icons.language,
+                          Icons.home,
                           color: Colors.white,
                         ),
                         title: Text(
-                          'Dutch, English',
+                          '${info[index].language}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text(
                           'Language',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -99,17 +124,18 @@ class _country_infoState extends State<country_info> {
                           color: Colors.white,
                         ),
                         title: Text(
-                          'Europe',
+                          '${info[index].continent}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text(
                           'Continent',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -119,17 +145,18 @@ class _country_infoState extends State<country_info> {
                           color: Colors.white,
                         ),
                         title: Text(
-                          '30528 km. sq.',
+                          '${info[index].area}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text(
                           'Area',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -139,17 +166,18 @@ class _country_infoState extends State<country_info> {
                           color: Colors.white,
                         ),
                         title: Text(
-                          '11,467,362',
+                          '${info[index].population}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text(
                           'Population',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
@@ -159,48 +187,48 @@ class _country_infoState extends State<country_info> {
                           color: Colors.white,
                         ),
                         title: Text(
-                          '366.33/km sq.',
+                          '${info[index].density}',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20.0,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                         subtitle: Text(
                           'Density',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      ListTile(
+                        leading: Icon(
+                          Icons.phone,
+                          color: Colors.white,
+                        ),
+                        title: Text(
+                          '${info[index].netDomain}',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Domain',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
                     ],
                   ),
                 ),
-              )
-            ],
-          ),
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.menu,
-                color: Colors.tealAccent,
               ),
-              label: 'Menu'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Colors.cyanAccent), label: 'Home'),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.teal,
-            ),
-            label: 'Back',
-          ),
-        ],
-      ),
+            );
+          }),
     );
   }
 }

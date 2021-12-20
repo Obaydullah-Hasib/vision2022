@@ -1,8 +1,8 @@
-class country{
-  String? id;
+class Country_Info {
   String? name;
   String? capital;
   String? language;
+  String? currency;
   String? continent;
   double? area;
   double? population;
@@ -10,9 +10,8 @@ class country{
   String? callingCode;
   String? netDomain;
 
-  country(
-      this.id,
-      this.name,
+  Country_Info(
+      {this.name,
       this.capital,
       this.language,
       this.continent,
@@ -20,5 +19,5 @@ class country{
       this.population,
       this.density,
       this.callingCode,
-      this.netDomain);
+      this.netDomain});
 }
