@@ -1,4 +1,4 @@
-class Country_Info {
+class CountryModel {
   String? name;
   String? capital;
   String? language;
@@ -10,10 +10,11 @@ class Country_Info {
   String? callingCode;
   String? netDomain;
 
-  Country_Info(
+  CountryModel(
       {this.name,
       this.capital,
       this.language,
+      this.currency,
       this.continent,
       this.area,
       this.population,

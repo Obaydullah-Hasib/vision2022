@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:vision2022/day24/task/county_currency_capital/countries_list.dart';
+import 'package:vision2022/Task/Country_capital_3rd_try/allCountryList.dart';
+import 'package:vision2022/day18/tabbar.dart';
 import 'package:vision2022/practice/county_currency_capital/privacy_policy.dart';
 
-import '../../../day23/url_launcher.dart';
-import 'All Countries.dart';
+import '../../garbage/country_capital_day24/All Countries.dart';
 
-class CountryCurrencyCapitalHomepage extends StatefulWidget {
-  const CountryCurrencyCapitalHomepage({Key? key}) : super(key: key);
+class CountryHomepage extends StatefulWidget {
+  const CountryHomepage({Key? key}) : super(key: key);
 
   @override
-  _CountryCurrencyCapitalHomepageState createState() =>
-      _CountryCurrencyCapitalHomepageState();
+  _CountryHomepageState createState() => _CountryHomepageState();
 }
 
-class _CountryCurrencyCapitalHomepageState
-    extends State<CountryCurrencyCapitalHomepage> {
-  List listItem = [];
+class _CountryHomepageState extends State<CountryHomepage> {
   List<String> homepage_options = [
     'All Countries',
     'Play Quiz',
@@ -87,7 +84,12 @@ class _CountryCurrencyCapitalHomepageState
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => AllCountryList()));
+                              builder: (context) => CountryList()));
+                    } else if (index == 1) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => tabBarClass()));
                     }
                   },
                   child: Column(

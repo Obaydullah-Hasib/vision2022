@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../day24/task/country_capital_day24/countryList/countryListData.dart';
-
 class country_info extends StatefulWidget {
   const country_info({Key? key}) : super(key: key);
 
