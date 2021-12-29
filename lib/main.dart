@@ -12,6 +12,8 @@ import 'package:vision2022/day22/flutter_search_bar.dart';
 import 'package:vision2022/day22/flutter_search_delecate.dart';
 import 'package:vision2022/day28/splashScreen.dart';
 import 'package:vision2022/day28/webview.dart';
+import 'package:vision2022/day29/sharedpreferenceclass.dart';
+import 'package:vision2022/day29/slider.dart';
 import 'package:vision2022/garbage/country_capital_day24/country_currnecy_capital_homepage.dart';
 
 import 'package:vision2022/day26/countryAppSLiverAppBar/homepage.dart';
@@ -49,7 +51,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: WebViewClass(),
+      home: SharePreferenceClass(),
+
     );
   }
 }
