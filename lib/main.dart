@@ -10,13 +10,13 @@ import 'package:vision2022/day15/task.dart';
 import 'package:vision2022/day21/switch.dart';
 import 'package:vision2022/day22/flutter_search_bar.dart';
 import 'package:vision2022/day22/flutter_search_delecate.dart';
-<<<<<<< HEAD
+import 'package:vision2022/day28/splashScreen.dart';
+import 'package:vision2022/day28/webview.dart';
 import 'package:vision2022/garbage/country_capital_day24/country_currnecy_capital_homepage.dart';
 
-=======
 import 'package:vision2022/day26/countryAppSLiverAppBar/homepage.dart';
 import 'package:vision2022/practice/country_project/country_info/country_info_display.dart';
->>>>>>> d28030c5e115f4df25d7e1d28518d96b6ea84abe
+
 import 'package:vision2022/practice/county_currency_capital/country_currency_capital.dart';
 import 'package:vision2022/practice/county_currency_capital/country_info.dart';
 import 'package:vision2022/practice_bar/sliverAppBar.dart';
@@ -48,11 +48,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-<<<<<<< HEAD
-      home: CountryHomepage(),
-=======
-      home: Country_info_homepage(),
->>>>>>> d28030c5e115f4df25d7e1d28518d96b6ea84abe
+
+      home: WebViewClass(),
     );
   }
 }

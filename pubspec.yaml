@@ -39,6 +39,7 @@ dependencies:
   share: ^2.0.4
   math_expressions: ^2.2.0
   image_picker: ^0.8.4+4
+  webview_flutter: ^3.0.0
 
 
 dev_dependencies:
